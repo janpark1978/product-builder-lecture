@@ -11,6 +11,7 @@
     --number-bg: #f0f2f5;
     --number-text: #333333;
     --shadow: rgba(0, 0, 0, 0.1);
+    --bar-bg: #e0e0e0;
 }
 
 [data-theme="dark"] {
@@ -24,6 +25,7 @@
     --number-bg: #f0f0f0;
     --number-text: #333333;
     --shadow: rgba(0, 0, 0, 0.4);
+    --bar-bg: #444444;
 }
 
 body {
@@ -72,11 +74,79 @@ body {
 }
 
 .lotto-header h1 {
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 0.5rem 0;
     font-size: 2.2rem;
     color: var(--header-color);
 }
 
+.lotto-header p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* AI Section Styles */
+.ai-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.webcam-wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--bar-bg);
+    box-shadow: 0 4px 15px var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webcam-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 15px;
+}
+
+.prediction-wrapper {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.prediction-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.prediction-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.prediction-bar-outer {
+    width: 100%;
+    height: 15px;
+    background-color: var(--bar-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.prediction-bar-inner {
+    height: 100%;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+/* Lotto Styles */
 .lotto-numbers {
     display: flex;
     flex-wrap: wrap;

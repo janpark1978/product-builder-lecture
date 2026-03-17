@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>AI Animal Face Test & Lotto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,6 +11,20 @@
         <div class="theme-toggle-container">
             <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
         </div>
+        <div class="lotto-header">
+            <h1>AI Animal Face Test</h1>
+            <p>Are you a Dog or a Cat face?</p>
+        </div>
+
+        <!-- Animal Face Test Section -->
+        <div class="ai-section">
+            <div id="webcam-container" class="webcam-wrapper"></div>
+            <div id="label-container" class="prediction-wrapper"></div>
+            <button type="button" class="lotto-button" id="start-ai-btn" onclick="initAI()">Start AI Test</button>
+        </div>
+
+        <hr class="divider">
+
         <div class="lotto-header">
             <h1>Lotto Generator</h1>
         </div>
@@ -33,25 +47,22 @@
         <hr class="divider">
 
         <div id="disqus_thread"></div>
-        <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="main.js"></script>
+    
+    <!-- Disqus Config -->
+    <script>
+        (function() {
             var d = document, s = d.createElement('script');
             s.src = 'https://productbuilder-qffyvs1r7z.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
-        <script src="main.js"></script>
-        </body>
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
 </html>
